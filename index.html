@@ -83,6 +83,20 @@
     .section-sub { font-size: 1rem; color: var(--muted); max-width: 520px; margin-bottom: 3rem; }
 
     /* MENU */
+    /* DISH CAROUSEL */
+    .dish-carousel-wrap { padding: 3rem 0 0; background: var(--dark-card); overflow: hidden; }
+    .dish-carousel-title { text-align: center; font-size: .7rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--red); margin-bottom: 1.5rem; padding: 0 5vw; }
+    .dish-carousel-track { display: flex; gap: 16px; width: max-content; animation: carouselScroll 38s linear infinite; padding: 0 5vw; }
+    .dish-carousel-wrap:hover .dish-carousel-track { animation-play-state: paused; }
+    .dish-card { flex-shrink: 0; width: 180px; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); background: var(--glass-bg); }
+    .dish-card img { width: 100%; height: 140px; object-fit: cover; display: block; }
+    .dish-card-label { padding: 8px 10px; font-size: .72rem; font-weight: 600; color: var(--gold); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    @keyframes carouselScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @media (max-width: 768px) {
+      .dish-card { width: 140px; }
+      .dish-card img { height: 110px; }
+    }
+
     #menu { background: var(--dark-card); }
     .menu-filters-wrap { position: sticky; top: 64px; z-index: 100; background: var(--dark-card); padding: 14px 0 12px; border-bottom: 1px solid var(--border); margin-bottom: 2.5rem; }
     .menu-filters { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 0 5vw; }
@@ -225,6 +239,44 @@
 </div>
 
 <!-- MENU -->
+<!-- DISH CAROUSEL -->
+<div class="dish-carousel-wrap">
+  <p class="dish-carousel-title" data-es="Algunos de nuestros platillos" data-en="Some of our dishes">Algunos de nuestros platillos</p>
+  <div class="dish-carousel-track">
+    <div class="dish-card"><img src="img/dishes/huarache.jpg" alt="Huarache" /><div class="dish-card-label" data-es="Huarache" data-en="Huarache">Huarache</div></div>
+    <div class="dish-card"><img src="img/dishes/gordita.jpg" alt="Gordita" /><div class="dish-card-label" data-es="Gordita" data-en="Gordita">Gordita</div></div>
+    <div class="dish-card"><img src="img/dishes/quesadilla.jpg" alt="Quesadilla" /><div class="dish-card-label" data-es="Quesadilla" data-en="Quesadilla">Quesadilla</div></div>
+    <div class="dish-card"><img src="img/dishes/cemita.jpg" alt="Cemita" /><div class="dish-card-label" data-es="Cemita" data-en="Cemita">Cemita</div></div>
+    <div class="dish-card"><img src="img/dishes/pambazo.jpg" alt="Pambazo" /><div class="dish-card-label" data-es="Pambazo" data-en="Pambazo">Pambazo</div></div>
+    <div class="dish-card"><img src="img/dishes/enchiladas.jpg" alt="Enchiladas" /><div class="dish-card-label" data-es="Enchiladas" data-en="Enchiladas">Enchiladas</div></div>
+    <div class="dish-card"><img src="img/dishes/torta.jpg" alt="Torta" /><div class="dish-card-label" data-es="Torta" data-en="Torta">Torta</div></div>
+    <div class="dish-card"><img src="img/dishes/burrito.jpg" alt="Burrito" /><div class="dish-card-label" data-es="Burrito" data-en="Burrito">Burrito</div></div>
+    <div class="dish-card"><img src="img/dishes/sope.jpg" alt="Sope" /><div class="dish-card-label" data-es="Sope" data-en="Sope">Sope</div></div>
+    <div class="dish-card"><img src="img/dishes/tlacoyo.jpg" alt="Tlacoyo" /><div class="dish-card-label" data-es="Tlacoyo" data-en="Tlacoyo">Tlacoyo</div></div>
+    <div class="dish-card"><img src="img/dishes/tostada_pata.jpg" alt="Tostada de Pata" /><div class="dish-card-label" data-es="Tostada de Pata" data-en="Pig's Feet Tostada">Tostada de Pata</div></div>
+    <div class="dish-card"><img src="img/dishes/menudo.jpg" alt="Menudo" /><div class="dish-card-label" data-es="Menudo" data-en="Menudo">Menudo</div></div>
+    <div class="dish-card"><img src="img/dishes/barbacoa.jpg" alt="Barbacoa de Borrego" /><div class="dish-card-label" data-es="Barbacoa de Borrego" data-en="Lamb Barbacoa">Barbacoa de Borrego</div></div>
+    <div class="dish-card"><img src="img/dishes/desayuno.jpg" alt="Desayuno" /><div class="dish-card-label" data-es="Desayuno" data-en="Breakfast">Desayuno</div></div>
+    <div class="dish-card"><img src="img/dishes/hotdog.jpg" alt="Hot Dog" /><div class="dish-card-label" data-es="Hot Dog" data-en="Hot Dog">Hot Dog</div></div>
+    <!-- duplicate set for seamless loop -->
+    <div class="dish-card"><img src="img/dishes/huarache.jpg" alt="Huarache" /><div class="dish-card-label" data-es="Huarache" data-en="Huarache">Huarache</div></div>
+    <div class="dish-card"><img src="img/dishes/gordita.jpg" alt="Gordita" /><div class="dish-card-label" data-es="Gordita" data-en="Gordita">Gordita</div></div>
+    <div class="dish-card"><img src="img/dishes/quesadilla.jpg" alt="Quesadilla" /><div class="dish-card-label" data-es="Quesadilla" data-en="Quesadilla">Quesadilla</div></div>
+    <div class="dish-card"><img src="img/dishes/cemita.jpg" alt="Cemita" /><div class="dish-card-label" data-es="Cemita" data-en="Cemita">Cemita</div></div>
+    <div class="dish-card"><img src="img/dishes/pambazo.jpg" alt="Pambazo" /><div class="dish-card-label" data-es="Pambazo" data-en="Pambazo">Pambazo</div></div>
+    <div class="dish-card"><img src="img/dishes/enchiladas.jpg" alt="Enchiladas" /><div class="dish-card-label" data-es="Enchiladas" data-en="Enchiladas">Enchiladas</div></div>
+    <div class="dish-card"><img src="img/dishes/torta.jpg" alt="Torta" /><div class="dish-card-label" data-es="Torta" data-en="Torta">Torta</div></div>
+    <div class="dish-card"><img src="img/dishes/burrito.jpg" alt="Burrito" /><div class="dish-card-label" data-es="Burrito" data-en="Burrito">Burrito</div></div>
+    <div class="dish-card"><img src="img/dishes/sope.jpg" alt="Sope" /><div class="dish-card-label" data-es="Sope" data-en="Sope">Sope</div></div>
+    <div class="dish-card"><img src="img/dishes/tlacoyo.jpg" alt="Tlacoyo" /><div class="dish-card-label" data-es="Tlacoyo" data-en="Tlacoyo">Tlacoyo</div></div>
+    <div class="dish-card"><img src="img/dishes/tostada_pata.jpg" alt="Tostada de Pata" /><div class="dish-card-label" data-es="Tostada de Pata" data-en="Pig's Feet Tostada">Tostada de Pata</div></div>
+    <div class="dish-card"><img src="img/dishes/menudo.jpg" alt="Menudo" /><div class="dish-card-label" data-es="Menudo" data-en="Menudo">Menudo</div></div>
+    <div class="dish-card"><img src="img/dishes/barbacoa.jpg" alt="Barbacoa de Borrego" /><div class="dish-card-label" data-es="Barbacoa de Borrego" data-en="Lamb Barbacoa">Barbacoa de Borrego</div></div>
+    <div class="dish-card"><img src="img/dishes/desayuno.jpg" alt="Desayuno" /><div class="dish-card-label" data-es="Desayuno" data-en="Breakfast">Desayuno</div></div>
+    <div class="dish-card"><img src="img/dishes/hotdog.jpg" alt="Hot Dog" /><div class="dish-card-label" data-es="Hot Dog" data-en="Hot Dog">Hot Dog</div></div>
+  </div>
+</div>
+
 <section id="menu">
   <p class="section-label" data-es="Lo que servimos" data-en="What we serve">Lo que servimos</p>
   <h2 class="section-title" data-es-html="Nuestro &lt;em&gt;Menú&lt;/em&gt;" data-en-html="Our &lt;em&gt;Menu&lt;/em&gt;">Nuestro <em>Menú</em></h2>
